@@ -2,9 +2,7 @@
 
 ## Overview
 
-The `WhatsAppExportedChatDataExtractor` is a Python tool designed to filter and extract content from exported WhatsApp chat data files. It processes raw chat data and converts it into a clean and structured JSON format.
-
-## Features
+This is is a tool designed to filter and extract content from exported WhatsApp chat data files. It processes raw chat data and converts it into a clean and structured JSON format.
 
 - **Filters**: Excludes irrelevant system messages and group activities.
 - **Extracts**: Parses and extracts date, time, username, and message content.
