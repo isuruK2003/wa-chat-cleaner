@@ -45,16 +45,9 @@ export default function Home() {
     const formData = new FormData()
     formData.append("file", file)
 
-    // Try using a CORS proxy
-    const apiUrl = "http://ec2-18-208-144-61.compute-1.amazonaws.com:5000/process_chat"
-    // const corsProxyUrl = `https://corsproxy.io/?${encodeURIComponent(apiUrl)}`
-
-    // console.log("Sending request through CORS proxy:", corsProxyUrl)
-
-    const response = await fetch(apiUrl, {
-      method: "POST",
-      body: formData,
-    })
+    const corsProxyUrl = "https://cors-anywhere.herokuapp.com/";
+    const apiUrl = "https://ec2-18-208-144-61.compute-1.amazonaws.com:5000/process_chat";
+    const response = await fetch(corsProxyUrl + apiUrl, { method: "POST", body: formData });
 
     console.log("Response status:", response.status)
 

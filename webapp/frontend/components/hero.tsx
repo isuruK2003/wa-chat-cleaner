@@ -7,7 +7,7 @@ export function Hero() {
       <div className="absolute inset-0 opacity-10 bubble-pattern"></div>
 
       <div className="relative text-center z-10">
-        <h1 className="text-5xl font-bold tracking-tight sm:text-6xl mb-4 text-white drop-shadow-md">
+        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4 text-white drop-shadow-md">
           WA Export Cleaner
         </h1>
         <p className="text-lg max-w-2xl mx-auto text-white/90">
