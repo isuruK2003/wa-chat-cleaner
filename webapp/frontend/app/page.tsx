@@ -45,9 +45,11 @@ export default function Home() {
     const formData = new FormData()
     formData.append("file", file)
 
-    const corsProxyUrl = "https://cors-anywhere.herokuapp.com/";
-    const apiUrl = "https://ec2-18-208-144-61.compute-1.amazonaws.com:5000/process_chat";
-    const response = await fetch(corsProxyUrl + apiUrl, { method: "POST", body: formData });
+    const apiUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
+    if (apiUrl === undefined) {
+      throw new Error(`API URL cannot be retrieved from environment variables`)
+    }
+    const response = await fetch(apiUrl, { method: "POST", body: formData });
 
     console.log("Response status:", response.status)
 
@@ -106,4 +108,3 @@ export default function Home() {
     </main>
   )
 }
-
