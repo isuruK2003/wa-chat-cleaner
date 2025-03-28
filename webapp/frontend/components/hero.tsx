@@ -12,7 +12,7 @@ export function Hero() {
         </h1>
         <p className="text-lg max-w-2xl mx-auto text-white/90">
           Convert your WhatsApp chat exports to clean, structured JSON with just a few clicks. Upload your .txt file and
-          get an organized JSON file ready for download.
+          we'll process it through our API.
         </p>
 
         <div className="flex items-center justify-center gap-4 mt-8 text-sm">

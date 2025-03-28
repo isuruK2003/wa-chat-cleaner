@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "WA Export Cleaner - Convert WhatsApp Chats to JSON",
   description: "Clean and convert WhatsApp chat exports to structured JSON format",
-    generator: 'v0.dev'
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({
