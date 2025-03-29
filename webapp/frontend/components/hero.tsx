@@ -1,35 +1,28 @@
-import { ArrowRight } from "lucide-react"
+import Image from 'next/image';
 
 export function Hero() {
   return (
-    <div className="relative overflow-hidden rounded-2xl py-12 px-8 mb-8">
-      <div className="absolute inset-0 gradient-bg opacity-90"></div>
-      <div className="absolute inset-0 opacity-10 bubble-pattern"></div>
+    <div className="relative w-full min-h-[60vh] md:h-[75vh] flex items-center justify-center overflow-hidden py-12 md:py-0">
 
-      <div className="relative text-center z-10">
-        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4 text-white drop-shadow-md">
-          WA Export Cleaner
-        </h1>
-        <p className="text-lg max-w-2xl mx-auto text-white/90">
-          Convert your WhatsApp chat exports to clean, structured JSON with just a few clicks. Upload your .txt file and
-          we'll process it through our API.
+      <div className="absolute inset-0 z-0">
+        <Image src="/93822.jpg" alt="Background" fill priority className="object-cover" />
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      </div>
+
+      <div className='relative flex flex-col items-center px-6 sm:px-8 md:px-4 mx-auto max-w-6xl'>
+
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 md:mb-6 text-center">Convert WhatsApp Chat Exports to JSON</h1>
+
+        <p className="opacity-70 text-white mb-8 md:mb-10 w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl text-center text-base">
+          Need a JSON version of your WhatsApp chat? This is the tool for it. Upload your text version of your WhatsApp chat and transform it into a JSON version. Then you can use it for your project.
         </p>
 
-        <div className="flex items-center justify-center gap-4 mt-8 text-sm">
-          <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-white">
-            <span>Upload .txt</span>
-            <ArrowRight className="h-4 w-4" />
-          </div>
-          <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-white">
-            <span>Process</span>
-            <ArrowRight className="h-4 w-4" />
-          </div>
-          <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-white">
-            <span>Download JSON</span>
-          </div>
+        <div className='flex flex-col sm:flex-row gap-4 w-full max-w-xs sm:max-w-md justify-center'>
+          <button className="px-6 sm:px-8 py-3 text-sm hover:bg-white/10 text-white border border-white bg-white/35 font-medium rounded-lg transition-colors w-full">Use Now</button>
+          <button className="px-6 sm:px-8 py-3 text-sm bg-transparent hover:bg-white/10 text-white border border-white font-medium rounded-lg transition-colors w-full">Learn More</button>
         </div>
+
       </div>
     </div>
-  )
+  );
 }
-

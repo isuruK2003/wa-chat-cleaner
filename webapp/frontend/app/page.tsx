@@ -5,6 +5,8 @@ import { FileUploader } from "@/components/file-uploader"
 import { ProcessedData } from "@/components/processed-data"
 import { Hero } from "@/components/hero"
 import { parseWhatsAppChat } from "@/lib/parser"
+import HowItWorks from "@/components/how-it-works"
+import Footer from "@/components/footer"
 
 export default function Home() {
   const [processedData, setProcessedData] = useState<any[] | null>(null)
@@ -80,18 +82,17 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen py-8">
-      <div className="container mx-auto px-4 max-w-5xl">
-        <Hero />
+    <div className="min-h-screen">
+      <Hero />
+      <HowItWorks />
+      <div className="container mx-auto px-4 max-w-5xl py-[24px]">
 
-        <div className="mt-8">
-          <FileUploader
-            onFileUpload={handleFileUpload}
-            isProcessing={isProcessing}
-            useLocalProcessing={useLocalProcessing}
-            onToggleProcessing={() => setUseLocalProcessing(!useLocalProcessing)}
-          />
-        </div>
+        <FileUploader
+          onFileUpload={handleFileUpload}
+          isProcessing={isProcessing}
+          useLocalProcessing={useLocalProcessing}
+          onToggleProcessing={() => setUseLocalProcessing(!useLocalProcessing)}
+        />
 
         {error && (
           <div className="mt-6 p-4 bg-destructive/10 text-destructive rounded-xl border border-destructive/20">
@@ -105,6 +106,7 @@ export default function Home() {
           </div>
         )}
       </div>
-    </main>
+      <Footer />
+    </div>
   )
 }

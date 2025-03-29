@@ -43,7 +43,7 @@ export function FileUploader({
   })
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-8">
       {onToggleProcessing && (
         <div className="flex items-center justify-end space-x-2 mb-2">
           <div className="flex items-center space-x-2">
@@ -94,9 +94,6 @@ export function FileUploader({
                 <p className="text-sm text-muted-foreground mt-2">
                   or click to browse files (only .txt files are supported)
                 </p>
-                {useLocalProcessing && (
-                  <p className="text-xs text-accent mt-1">Using local processing - your data stays in your browser</p>
-                )}
               </div>
               <Button className="mt-4 bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity">
                 Select File
