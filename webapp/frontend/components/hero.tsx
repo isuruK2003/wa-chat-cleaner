@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export function Hero() {
   return (
-    <div className="relative w-full min-h-[60vh] md:h-[75vh] flex items-center justify-center overflow-hidden py-12 md:py-0">
+    <div className="relative w-full min-h-[60vh] md:h-[100vh] flex items-center justify-center overflow-hidden py-12 md:py-0">
 
       <div className="absolute inset-0 z-0">
         <Image src="/93822.jpg" alt="Background" fill priority className="object-cover" />
