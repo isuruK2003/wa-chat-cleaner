@@ -18,8 +18,8 @@ export function Hero() {
         </p>
 
         <div className='flex flex-col sm:flex-row gap-4 w-full max-w-xs sm:max-w-md justify-center'>
-          <button className="px-6 sm:px-8 py-3 text-sm hover:bg-white/10 text-white border border-white bg-white/35 font-medium rounded-lg transition-colors w-full">Use Now</button>
-          <button className="px-6 sm:px-8 py-3 text-sm bg-transparent hover:bg-white/10 text-white border border-white font-medium rounded-lg transition-colors w-full">Learn More</button>
+          <a href='#how-to-use' className="px-6 sm:px-8 py-3 text-sm text-center cursor-pointer bg-transparent hover:bg-white/10 text-white border border-white font-medium rounded-lg transition-colors w-full">Learn More</a>
+          <a href='#use-now' className="px-6 sm:px-8 py-3 text-sm text-center cursor-pointer hover:bg-white/10 text-white border border-white bg-white/35 font-medium rounded-lg transition-colors w-full">Use Now</a>
         </div>
 
       </div>

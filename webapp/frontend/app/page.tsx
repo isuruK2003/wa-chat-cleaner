@@ -84,8 +84,10 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Hero />
-      <HowItWorks />
-      <div className="container mx-auto px-4 max-w-5xl py-[24px]">
+      <section id="how-to-use">
+        <HowItWorks />
+      </section>
+      <section id="use-now" className="container mx-auto px-4 max-w-5xl py-[24px]">
 
         <FileUploader
           onFileUpload={handleFileUpload}
@@ -105,7 +107,7 @@ export default function Home() {
             <ProcessedData data={processedData} />
           </div>
         )}
-      </div>
+      </section>
       <Footer />
     </div>
   )
