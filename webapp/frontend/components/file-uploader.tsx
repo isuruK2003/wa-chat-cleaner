@@ -47,7 +47,6 @@ export function FileUploader({
       {onToggleProcessing && (
         <div className="flex items-center justify-end space-x-2 mb-2">
           <div className="flex items-center space-x-2">
-            <Server className={cn("h-4 w-4", !useLocalProcessing ? "text-primary" : "text-muted-foreground")} />
             <Switch checked={useLocalProcessing} onCheckedChange={onToggleProcessing} id="processing-mode" />
             <Cpu className={cn("h-4 w-4", useLocalProcessing ? "text-primary" : "text-muted-foreground")} />
           </div>
